@@ -26,9 +26,9 @@ You should now have **test**, **train** and **valid** directories containing cla
 
 ## Part 1
 
-### `Image Classifier Project.ipynb`
+### [Image Classifier Project.ipynb]
 
-To review the  `Image Classifier Project.ipynb` notebook, launch **Jupyter Notebook** from the project root:
+To review the  [Image Classifier Project.ipynb] notebook, launch **Jupyter Notebook** from the project root:
 
 ```bash
 jupyter notebook
@@ -36,7 +36,7 @@ jupyter notebook
 
 ## Part 2
 
-### `train.py`
+### [train.py]
 
 **Required options:**
 
@@ -50,7 +50,7 @@ jupyter notebook
     - `python train.py data_dir --gpu`
 
 
-### `predict.py`
+### [predict.py]
 
 - Basic usage
     - `python predict.py /path/to/image checkpoint`
@@ -63,4 +63,6 @@ jupyter notebook
         - `python predict.py input checkpoint --gpu`
 
 [flower_data.tar.gz]:https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz
-
+[Image Classifier Project.ipynb]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.ipynb
+[train.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/train.py
+[predict.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/predict.py
