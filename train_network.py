@@ -79,6 +79,9 @@ class TrainerNet:
         if gpu and torch.cuda.is_available():
             device = torch.device("cuda:0")
 
+        # Move model to preferred device.
+        self._model = self._model.to(device)
+
         # Start clean by setting gradients of all parameters to zero.
         self._model.zero_grad()
 
@@ -88,9 +91,6 @@ class TrainerNet:
         # Adam: A Method for Stochastic Optimization
         # https://arxiv.org/abs/1412.6980
         optimizer = optim.Adam(self._model.classifier.parameters(), lr=learning_rate)
-
-        # Move model to perferred device.
-        self._model = self._model.to(device)
 
         data_set_len = len(self._data_loader.batch_sampler)
 
@@ -115,7 +115,7 @@ class TrainerNet:
                 # Set gradients of all parameters to zero.
                 optimizer.zero_grad()
 
-                # Propigate forward and backward
+                # Propagate forward and backward
                 outputs = self._model.forward(images)
 
                 loss = criterion(outputs, labels)

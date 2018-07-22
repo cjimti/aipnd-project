@@ -24,6 +24,16 @@ tar xzvf ./flower_data.tar.gz
 
 You should now have **test**, **train** and **valid** directories containing classification directories and flower images under the **flowers** directory.
 
+## Examples
+
+**densenet121** with one **500** node layer:
+```bash
+python ./train.py ./flowers/train --arch "densenet121" --hidden-units 500 --epochs 5
+```
+
+
+
+
 ## Part 1
 
 ### [Image Classifier Project.ipynb]
