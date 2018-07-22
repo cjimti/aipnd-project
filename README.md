@@ -38,7 +38,7 @@ jupyter notebook
 
 ### [train.py]
 
-**Required options:**
+**Options:**
 
 - Set directory to save checkpoints
     - `python train.py data_dir --save_dir save_directory`
