@@ -16,10 +16,8 @@ Image categories are found in `cat_to_name.json` and flower images can be downlo
 
 Get flower flowers:
 ```bash
-mkdir -p flowers
-cd data
-wget https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz
-tar xzvf ./flower_data.tar.gz
+mkdir -p flowers && cd flower
+curl https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz | tar xz
 ```
 
 You should now have **test**, **train** and **valid** directories containing classification directories and flower images under the **flowers** directory.
