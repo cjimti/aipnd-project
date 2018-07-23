@@ -32,17 +32,15 @@ def main():
     device = torch.device("cpu")
 
     # Requested GPU
-    if cli_args.use_gpu and torch.cuda.is_available():
+    if cli_args.use_gpu:
         device = torch.device("cuda:0")
-    else:
-        print("WARNING: GPU is not available. Using CPU.")
 
     # load categories
     with open(cli_args.categories_json, 'r') as f:
         cat_to_name = json.load(f)
 
     # load model
-    chkp_model = load_checkpoint(cli_args.checkpoint_file)
+    chkp_model = load_checkpoint(device, cli_args.checkpoint_file)
 
     top_prob, top_classes = predict(cli_args.path_to_image, chkp_model, cli_args.top_k)
 
@@ -100,7 +98,7 @@ def predict(image_path, model, topk=5):
     return top_prob.numpy()[0], mapped_classes
 
 
-def load_checkpoint(file='checkpoint.pth'):
+def load_checkpoint(device, file='checkpoint.pth'):
     """
     Loads model checkpoint saved by train.py
     """
@@ -109,6 +107,7 @@ def load_checkpoint(file='checkpoint.pth'):
     model_state = torch.load(file, map_location=lambda storage, loc: storage)
 
     model = models.__dict__[model_state['arch']](pretrained=True)
+    model = model.to(device)
 
     model.classifier = model_state['classifier']
     model.load_state_dict(model_state['state_dict'])
