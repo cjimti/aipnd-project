@@ -15,7 +15,7 @@ Download zip archive for project deliverables version [1.0.0](https://github.com
 
 Image categories are found in [cat_to_name.json] and flower images can be downloaded in the gziped tar file [flower_data.tar.gz] from Udacity.
 
-Get flower flowers:
+Get flower images:
 ```bash
 mkdir -p flowers && cd flowers
 curl https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz | tar xz
