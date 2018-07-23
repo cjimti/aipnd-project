@@ -36,7 +36,7 @@ def get_args():
     """
 
     parser = argparse.ArgumentParser(
-        description="Train and save an image classification",
+        description="Train and save an image classification model.",
         usage="python ./train.py ./flowers/train --gpu --learning_rate 0.001 --hidden_units 3136 --epochs 5",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )

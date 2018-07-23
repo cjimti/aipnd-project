@@ -4,7 +4,7 @@ Part 2 of the Udacity AIPND final project submission for Craig Johnston.
 train.py train a new network on a specified data set.
 """
 __author__ = "Craig Johnston <cjimti@gmail.com>"
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 __license__ = "MIT"
 
 import sys
@@ -136,8 +136,6 @@ def main():
     print(f"Sending model to device {device}.")
     nn_model = nn_model.to(device)
 
-
-    # len(dataloaders["training"].dataset) returns the wrong number
     data_set_len = len(training_dataloader.batch_sampler)
 
     chk_every = 50

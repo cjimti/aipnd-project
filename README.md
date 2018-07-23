@@ -62,7 +62,7 @@ jupyter notebook
 - Choose architecture
     - `python train.py data_dir --arch "vgg13"`
 - Set hyperparameters
-    - `python train.py data_dir --learning_rate 0.01 --hidden_units 512 --epochs 20`
+    - `python train.py data_dir --learning_rate 0.01 --hidden_units 512 256 --epochs 20`
 - Use GPU for training
     - `python train.py data_dir --gpu`
 
@@ -70,7 +70,7 @@ jupyter notebook
 ```plain
 usage: python ./train.py ./flowers/train --gpu --learning_rate 0.001 --hidden_units 3136 --epochs 5
 
-Train and save an image classification
+Train and save an image classification model.
 
 positional arguments:
   data_directory
