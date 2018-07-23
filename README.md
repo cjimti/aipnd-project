@@ -9,6 +9,7 @@ Project deliverables:
 - `train.py` to train a new network on a data set.
 - `predict.py` to predict flower name from an image.
 
+Download zip archive for project deliverables version [1.0.0](https://github.com/cjimti/aipnd-project/archive/1.0.0.zip).
 
 ## Assets
 
