@@ -2,7 +2,7 @@
 
 Project code for Udacity's AI Programming with Python Nanodegree program.
 
-The main project deliberates are:
+Project deliverables:
 
 - `Image Classifier Project.ipynb` Jupyter Notebook
 - `Image Classifier Project.html` HTML export of the Jupyter Notebook above.
