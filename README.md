@@ -66,7 +66,7 @@ jupyter notebook
 - Use GPU for training
     - `python train.py data_dir --gpu`
 
-`python ./train.py -h`:
+**Help** - `python ./train.py -h`:
 ```plain
 usage: python ./train.py ./flowers/train --gpu --learning_rate 0.001 --hidden_units 3136 --epochs 5
 
