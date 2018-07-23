@@ -112,7 +112,7 @@ def main():
     """
         Main Function
     """
-    print(f'Command line argument utility for train.py.\nTry "python train.py -h".')
+    print(f'Command line argument utility for predict.py.\nTry "python train.py -h".')
 
 
 if __name__ == '__main__':

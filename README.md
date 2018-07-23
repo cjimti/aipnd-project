@@ -26,13 +26,20 @@ You should now have **test**, **train** and **valid** directories containing cla
 
 ## Examples
 
-**densenet121** with one **500** node layer:
+Train on **CPU** with default **vgg16**:
 ```bash
-python ./train.py ./flowers/train --arch "densenet121" --hidden-units 500 --epochs 5
+python ./train.py ./flowers/train/
 ```
 
+Train on **GPU** with **densenet121** with one **500** node layer:
+```bash
+python ./train.py ./flowers/train --gpu --arch "densenet121" --hidden_units 500 --epochs5
+```
 
-
+Additional hidden layers with checkpoint saved to densenet201 directory.
+```bash
+python ./train.py ./flowers/train --gpu --arch=densenet201 --hidden_units 1280 640 --save_dir densenet201
+```
 
 ## Part 1
 
@@ -59,6 +66,36 @@ jupyter notebook
 - Use GPU for training
     - `python train.py data_dir --gpu`
 
+`python ./train.py -h`:
+```plain
+usage: python ./train.py ./flowers/train --gpu --learning_rate 0.001 --hidden_units 3136 --epochs 5
+
+Train and save an image classification
+
+positional arguments:
+  data_directory
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --save_dir SAVE_DIR   Directory to save training checkpoint file (default:
+                        .)
+  --save_name SAVE_NAME
+                        Checkpoint filename. (default: checkpoint)
+  --categories_json CATEGORIES_JSON
+                        Path to file containing the categories. (default:
+                        cat_to_name.json)
+  --arch ARCH           Supported architectures: vgg11, vgg13, vgg16, vgg19,
+                        densenet121, densenet169, densenet161, densenet201
+                        (default: vgg16)
+  --gpu                 Use GPU (default: False)
+
+hyperparameters:
+  --learning_rate LEARNING_RATE
+                        Learning rate (default: 0.001)
+  --hidden_units HIDDEN_UNITS [HIDDEN_UNITS ...], -hu HIDDEN_UNITS [HIDDEN_UNITS ...]
+                        Hidden layer units (default: [3136, 784])
+  --epochs EPOCHS       Epochs (default: 1)
+```
 
 ### [predict.py]
 
