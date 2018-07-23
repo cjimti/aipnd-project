@@ -51,6 +51,8 @@ To review the  [Image Classifier Project.ipynb] notebook, launch **Jupyter Noteb
 jupyter notebook
 ```
 
+See the [Image Classifier Project.html] for an HTML export of the notebook.
+
 ## Part 2
 
 ### [train.py]
@@ -109,7 +111,29 @@ hyperparameters:
     - Use GPU for inference
         - `python predict.py input checkpoint --gpu`
 
+**Help** - `python ./predict.py -h`:
+```plain
+usage: python ./predict.py /path/to/image.jpg checkpoint.pth
+
+Image prediction.
+
+positional arguments:
+  path_to_image         Path to image file.
+  checkpoint_file       Path to checkpoint file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --save_dir SAVE_DIR   Directory to save training checkpoint file (default:
+                        .)
+  --top_k TOP_K         Return top KK most likely classes. (default: 5)
+  --category_names CATEGORIES_JSON
+                        Path to file containing the categories. (default:
+                        cat_to_name.json)
+  --gpu                 Use GPU (default: False)
+
+```
+
 [flower_data.tar.gz]:https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz
 [Image Classifier Project.ipynb]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.ipynb
 [train.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/train.py
-[predict.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/predict.py
+[predict.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.html
