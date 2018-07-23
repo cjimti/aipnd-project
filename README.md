@@ -12,11 +12,11 @@ Project deliverables:
 
 ## Assets
 
-Image categories are found in `cat_to_name.json` and flower images can be downloaded in the gziped tar file [flower_data.tar.gz] from Udacity.
+Image categories are found in [cat_to_name.json] and flower images can be downloaded in the gziped tar file [flower_data.tar.gz] from Udacity.
 
 Get flower flowers:
 ```bash
-mkdir -p flowers && cd flower
+mkdir -p flowers && cd flowers
 curl https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz | tar xz
 ```
 
@@ -162,3 +162,4 @@ optional arguments:
 [Image Classifier Project.ipynb]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.ipynb
 [train.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/train.py
 [predict.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.html
+[cat_to_name.json]:https://github.com/cjimti/aipnd-project/blob/master/cat_to_name.json
