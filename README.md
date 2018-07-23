@@ -2,24 +2,23 @@
 
 Project code for Udacity's AI Programming with Python Nanodegree program.
 
-The main project deliberates are:
+Project deliverables:
 
 - `Image Classifier Project.ipynb` Jupyter Notebook
 - `Image Classifier Project.html` HTML export of the Jupyter Notebook above.
 - `train.py` to train a new network on a data set.
 - `predict.py` to predict flower name from an image.
 
+Download zip archive for project deliverables version [1.0.0](https://github.com/cjimti/aipnd-project/archive/1.0.0.zip).
 
 ## Assets
 
-Image categories are found in `cat_to_name.json` and flower images can be downloaded in the gziped tar file [flower_data.tar.gz] from Udacity.
+Image categories are found in [cat_to_name.json] and flower images can be downloaded in the gziped tar file [flower_data.tar.gz] from Udacity.
 
-Get flower flowers:
+Get flower images:
 ```bash
-mkdir -p flowers
-cd data
-wget https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz
-tar xzvf ./flower_data.tar.gz
+mkdir -p flowers && cd flowers
+curl https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz | tar xz
 ```
 
 You should now have **test**, **train** and **valid** directories containing classification directories and flower images under the **flowers** directory.
@@ -164,3 +163,4 @@ optional arguments:
 [Image Classifier Project.ipynb]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.ipynb
 [train.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/train.py
 [predict.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.html
+[cat_to_name.json]:https://github.com/cjimti/aipnd-project/blob/master/cat_to_name.json
