@@ -23,7 +23,7 @@ def get_args():
 
     parser = argparse.ArgumentParser(
         description="Image prediction.",
-        usage="python ./predict.py checkpoint.pth --category_names cat_to_name.json --gpu",
+        usage="python ./predict.py /path/to/image.jpg checkpoint.pth",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
 
