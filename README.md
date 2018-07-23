@@ -24,7 +24,12 @@ tar xzvf ./flower_data.tar.gz
 
 You should now have **test**, **train** and **valid** directories containing classification directories and flower images under the **flowers** directory.
 
-## Examples
+## Examples train.py
+
+Help:
+```bash
+python ./train.py -h
+```
 
 Train on **CPU** with default **vgg16**:
 ```bash
@@ -41,7 +46,29 @@ Additional hidden layers with checkpoint saved to densenet201 directory.
 python ./train.py ./flowers/train --gpu --arch=densenet201 --hidden_units 1280 640 --save_dir densenet201
 ```
 
-## Part 1
+## Examples train.py
+
+Help
+```bash
+python ./predict.py -h
+```
+
+Basic Prediction
+```bash
+python ./predict.py flowers/valid/5/image_05192.jpg checkpoint.pth
+```
+
+Prediction with Top 10 Probabilities
+```bash
+python ./predict.py flowers/valid/5/image_05192.jpg checkpoint.pth --tok_k 10
+```
+
+Prediction with GPU
+```bash
+python ./predict.py flowers/valid/5/image_05192.jpg checkpoint.pth --gpu
+```
+
+## Part 1 Requirements
 
 ### [Image Classifier Project.ipynb]
 
@@ -53,7 +80,7 @@ jupyter notebook
 
 See the [Image Classifier Project.html] for an HTML export of the notebook.
 
-## Part 2
+## Part 2 Requirements
 
 ### [train.py]
 
