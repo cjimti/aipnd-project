@@ -1,17 +1,13 @@
-# AI Programming with Python Project
+# AI image classification and machine learning utilizing the PyTorch framework
 
-Project code for Udacity's AI Programming with Python Nanodegree program.
-
-Project deliverables:
+Project assets:
 
 - `Image Classifier Project.ipynb` Jupyter Notebook
 - `Image Classifier Project.html` HTML export of the Jupyter Notebook above.
 - `train.py` to train a new network on a data set.
 - `predict.py` to predict flower name from an image.
 
-Download zip archive for project deliverables version [1.0.0](https://github.com/cjimti/aipnd-project/archive/1.0.0.zip).
-
-## Assets
+## Example Image for Training
 
 Image categories are found in [cat_to_name.json] and flower images can be downloaded in the gziped tar file [flower_data.tar.gz] from Udacity.
 
@@ -67,7 +63,7 @@ Prediction with GPU
 python ./predict.py flowers/valid/5/image_05192.jpg checkpoint.pth --gpu
 ```
 
-## Part 1 Requirements
+## Part 1 Jupyter Notebook
 
 ### [Image Classifier Project.ipynb]
 
@@ -77,9 +73,7 @@ To review the  [Image Classifier Project.ipynb] notebook, launch **Jupyter Noteb
 jupyter notebook
 ```
 
-See the [Image Classifier Project.html] for an HTML export of the notebook.
-
-## Part 2 Requirements
+## Part 2 Scripts
 
 ### [train.py]
 
@@ -160,7 +154,7 @@ optional arguments:
 ```
 
 [flower_data.tar.gz]:https://s3.amazonaws.com/content.udacity-data.com/nd089/flower_data.tar.gz
-[Image Classifier Project.ipynb]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.ipynb
-[train.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/train.py
-[predict.py]:https://github.com/cjimti/personal-aipnd-project/blob/master/Image%20Classifier%20Project.html
+[Image Classifier Project.ipynb]:https://github.com/cjimti/aipnd-project/blob/master/Image%20Classifier%20Project.ipynb
+[train.py]:https://github.com/cjimti/aipnd-project/blob/master/train.py
+[predict.py]:https://github.com/cjimti/aipnd-project/blob/master/Image%20Classifier%20Project.html
 [cat_to_name.json]:https://github.com/cjimti/aipnd-project/blob/master/cat_to_name.json
